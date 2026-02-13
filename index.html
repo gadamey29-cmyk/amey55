@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>💝 For Vibha – From Miles Away</title>
+    <meta name="description" content="A special Valentine's message for Vibha">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Falling Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.pixabay.com/audio/2024/11/04/audio_4956b4ece1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ============ INTRO SECTION ============ -->
+    <section class="page active" id="intro">
+        <div class="content-wrapper">
+            <div class="emoji-header">💝</div>
+            <h1 class="main-title typewriter" id="introTitle"></h1>
+            <div class="section-badge fade-in" data-delay="2200">🌸 A Little Story</div>
+            <div class="intro-text fade-group">
+                <div class="quote fade-in" data-delay="2800">
+                    <p>"They say distance makes love harder...</p>
+                    <p>But for us, it made it <em>stronger</em>.</p>
+                    <p>2.3 years... different places... same heartbeat.</p>
+                    <p>And her name is <span class="highlight-name">Vibha</span> ❤️"</p>
+                </div>
+            </div>
+            <button class="btn-romantic fade-in" data-delay="5000" onclick="goToPage('loveLetter')">
+                <span>Continue</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============ SHORT LOVE LETTER ============ -->
+    <section class="page" id="loveLetter">
+        <div class="content-wrapper">
+            <div class="section-badge">💌 Short Love Letter</div>
+            <div class="divider"></div>
+            <div class="chapter-body fade-group">
+                <div class="quote fade-in" data-delay="500">
+                    <p>"Vibha,</p>
+                    <p>Even miles away, you are my first thought in the morning</p>
+                    <p>and my last thought at night.</p>
+                </div>
+                <div class="quote fade-in" data-delay="2500">
+                    <p>We may not meet every day,</p>
+                    <p>but we choose each other every single day.</p>
+                    <p>And that's what makes us strong."</p>
+                </div>
+            </div>
+            <button class="btn-romantic fade-in" data-delay="4500" onclick="goToPage('proposal')">
+                <span>One More Thing...</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============ PROPOSAL WITH BEARS ============ -->
+    <section class="page darker" id="proposal">
+        <div class="content-wrapper">
+            <div class="section-badge proposal-badge">💍 Proposal</div>
+            <div class="divider gold"></div>
+
+            <!-- Bear Characters -->
+            <div class="bears-stage" id="bearsStage">
+                <div class="bear bear-brown" id="bearBrown">
+                    <div class="bear-emoji">🐻</div>
+                    <div class="bear-label">Me</div>
+                </div>
+                <div class="bear-heart" id="bearHeart">💖</div>
+                <div class="bear bear-white" id="bearWhite">
+                    <div class="bear-emoji">🐻‍❄️</div>
+                    <div class="bear-label">Vibha</div>
+                </div>
+            </div>
+
+            <div class="chapter-body fade-group">
+                <div class="quote proposal-question fade-in" data-delay="500" id="proposalQuestion">
+                    <p>"Distance keeps our hands apart...</p>
+                    <p>but never our hearts.</p>
+                    <p class="big-question">So Vibha...</p>
+                    <p class="big-question">Will you be my Valentine —</p>
+                    <p>today, tomorrow, and until</p>
+                    <p>distance becomes just a memory? 💖"</p>
+                </div>
+            </div>
+            <div class="proposal-buttons fade-in" data-delay="3000" id="proposalButtons">
+                <button class="btn-yes" id="btnYes" onclick="handleYes()">
+                    <span>💖 Yes</span>
+                </button>
+                <button class="btn-no" id="btnNo">
+                    <span>😢 No</span>
+                </button>
+            </div>
+            <div class="no-attempt-counter" id="noCounter"></div>
+        </div>
+    </section>
+
+    <!-- ============ AFTER YES – BEARS UNITE ============ -->
+    <section class="page celebration" id="afterYes">
+        <div class="content-wrapper">
+            <!-- Celebration bears -->
+            <div class="celebration-bears" id="celebrationBears">
+                <div class="celeb-bear celeb-bear-brown">
+                    <div class="bear-emoji">🐻</div>
+                </div>
+                <div class="celeb-heart" id="celebHeart">💖</div>
+                <div class="celeb-bear celeb-bear-white">
+                    <div class="bear-emoji">🐻‍❄️</div>
+                </div>
+            </div>
+
+            <h2 class="chapter-title celebration-title">She Said Yes!</h2>
+            <div class="divider gold"></div>
+            <div class="chapter-body fade-group">
+                <div class="quote fade-in" data-delay="500">
+                    <p>"One day there will be no distance...</p>
+                    <p>Just us. Together. Always. ❤️"</p>
+                </div>
+            </div>
+            <div class="final-message fade-in" data-delay="3000">
+                <p class="forever-text">Happy Valentine's Day, Vibha ❤️</p>
+                <p class="sub-text">— Yours, from miles away, but never far from your heart.</p>
+            </div>
+
+            <div class="ring-animation fade-in" data-delay="4500">
+                <span class="ring-emoji">💍</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Toggle -->
+    <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+        <span id="musicIcon">🔇</span>
+    </button>
+
+    <!-- Tap hint for mobile -->
+    <div class="tap-hint" id="tapHint">
+        <span>Tap anywhere to start 🎵</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
